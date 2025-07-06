@@ -1,0 +1,9 @@
+version: "3"
+services:
+  grs:
+    image: mrchetan/github-readme-stats:latest
+    container_name: grs
+    environment:
+      PAT_1: ghp_**** # Replace with your personal access token, see README.md for more info
+    ports:
+      - 9000:9000

@@ -794,6 +794,33 @@ Since the GitHub API only allows 5k requests per hour, my `https://github-readme
 
 </details>
 
+## On Docker
+
+Here are some example ways of deploying this project using Docker
+
+- docker-compose.yml
+```yml
+version: "3"
+services:
+  grs:
+    image: github-readme-stats:latest
+    container_name: grs
+    environment:
+      PAT_1: ghp_****
+    ports:
+      - 9000:9000
+```
+
+- docker run
+```bash
+$ docker run \
+  --name grs \
+  --restart=unless-stopped \
+  -d \
+  -e PAT_1="ghp_****" \
+  github-readme-stats
+```
+
 ## On other platforms
 
 > [!WARNING]\

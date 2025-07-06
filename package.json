@@ -68,6 +68,9 @@
     "upgrade": "^1.1.0",
     "word-wrap": "^1.2.5"
   },
+    "optionalDependencies": {
+    "express": "^5.1.0"
+  },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
   },
